@@ -1,0 +1,18 @@
+{
+  "dragndrop": {
+    "url": "http://examples.rodin.io/samples/dragndrop/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/dragndrop/"
+  },
+  "primitives": {
+    "url": "http://examples.rodin.io/samples/primitives/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/primitives/"
+  },
+  "simple": {
+    "url": "http://examples.rodin.io/samples/simple/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/simple/"
+  },
+  "videoplayer": {
+    "url": "http://examples.rodin.io/samples/videoplayer/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/videoplayer/"
+  }
+}
