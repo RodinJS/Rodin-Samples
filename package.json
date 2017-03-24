@@ -4,7 +4,8 @@
   "description": "Rodin Inc. Samples Repository.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm i"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,24 @@
   "bugs": {
     "url": "https://github.com/RodinJS/Rodin-Samples/issues"
   },
-  "homepage": "https://github.com/RodinJS/Rodin-Samples#readme"
+  "homepage": "https://github.com/RodinJS/Rodin-Samples#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.22.1",
+    "babel-plugin-transform-class-properties": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-systemjs": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2016": "^6.22.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-removelogs": "^0.1.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-uglify": "^2.0.1",
+    "merge-stream": "^1.0.1",
+    "run-sequence": "^1.2.2"
+  }
 }
