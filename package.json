@@ -1,0 +1,28 @@
+{
+  "name": "rodin-spamles",
+  "version": "0.0.5",
+  "description": "Rodin Inc. Samples Repository.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodinJS/Rodin-Samples.git"
+  },
+  "keywords": [
+    "rodin",
+    "Rodin",
+    "Inc.",
+    "VR",
+    "AR",
+    "samples",
+    "examples"
+  ],
+  "author": "Rodin Inc.",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/RodinJS/Rodin-Samples/issues"
+  },
+  "homepage": "https://github.com/RodinJS/Rodin-Samples#readme"
+}
