@@ -95,18 +95,18 @@ export class VPcontrolPanel extends RODIN.Sculpt {
         this.createBackGround(distance, width);
         this.createBufferingLogo(distance);
         this.cover && this.createCover(distance, width);
-    this.hoverOutTime = Infinity;
-    this.hasCloseAction = false;
+        this.hoverOutTime = Infinity;
+        this.hasCloseAction = false;
 
-    this.hoverAction = (evt) => {
-      this.hoverOutTime = Infinity;
-            }
-    this.hoverOutAction = (evt) => {
-      this.hoverOutTime = RODIN.Time.now;
-    }
+        this.hoverAction = (evt) => {
+            this.hoverOutTime = Infinity;
+        };
+        this.hoverOutAction = (evt) => {
+            this.hoverOutTime = RODIN.Time.now;
+        };
 
         this.player.onBufferStart = () => {
-      this.bufferEl.visible = true;
+            this.bufferEl.visible = true;
             console.log("buffering START");
         };
 
@@ -120,15 +120,15 @@ export class VPcontrolPanel extends RODIN.Sculpt {
         });
 
         RODIN.Scene.active.on(RODIN.CONST.GAMEPAD_BUTTON_UP, (evt) => {
-            if(this.buttonDownTime && RODIN.Time.now - this.buttonDownTime >= 250) return;
+            if (this.buttonDownTime && RODIN.Time.now - this.buttonDownTime >= 250) return;
             this.toggleControls();
         });
-    RODIN.Scene.active.preRender(() => {
-      if(RODIN.Time.now - this.hoverOutTime > 3000 && !this.hasCloseAction) {
-        this.hideControls();
-        this.hasCloseAction = true;
-      }
-    });
+        RODIN.Scene.active.preRender(() => {
+            if (RODIN.Time.now - this.hoverOutTime > 3000 && !this.hasCloseAction) {
+                this.hideControls();
+                this.hasCloseAction = true;
+            }
+        });
     }
 
     hideControls() {
@@ -253,13 +253,13 @@ export class VPcontrolPanel extends RODIN.Sculpt {
         });
 
         playButton.on(RODIN.CONST.GAMEPAD_HOVER, (evt) => {
-      this.hoverAction(evt);
-            !evt.target.animation.isPlaying("scaleOutAnimation") && evt.target.animation.start("hoverAnimation");
+            this.hoverAction(evt);
+            !evt.target.animation.isPlaying() && evt.target.animation.start("hoverAnimation");
         });
 
         playButton.on(RODIN.CONST.GAMEPAD_HOVER_OUT, (evt) => {
-      this.hoverOutAction(evt);
-            !evt.target.animation.isPlaying("scaleOutAnimation") && evt.target.animation.start("hoverOutAnimation");
+            this.hoverOutAction(evt);
+            !evt.target.animation.isPlaying() && evt.target.animation.start("hoverOutAnimation");
         });
 
         playButton.on(RODIN.CONST.GAMEPAD_BUTTON_DOWN, (evt) => {
@@ -315,12 +315,12 @@ export class VPcontrolPanel extends RODIN.Sculpt {
 
         pauseButton.on(RODIN.CONST.GAMEPAD_HOVER, (evt) => {
             this.hoverAction(evt);
-            !evt.target.animation.isPlaying("scaleOutAnimation") && evt.target.animation.start("hoverAnimation");
+            !evt.target.animation.isPlaying() && evt.target.animation.start("hoverAnimation");
         });
 
         pauseButton.on(RODIN.CONST.GAMEPAD_HOVER_OUT, (evt) => {
             this.hoverOutAction(evt);
-            !evt.target.animation.isPlaying("scaleOutAnimation") && evt.target.animation.start("hoverOutAnimation");
+            !evt.target.animation.isPlaying() && evt.target.animation.start("hoverOutAnimation");
         });
 
         pauseButton.on(RODIN.CONST.GAMEPAD_BUTTON_DOWN, (evt) => {
@@ -336,6 +336,10 @@ export class VPcontrolPanel extends RODIN.Sculpt {
                 playButton.parent = this.panel;
                 playButton.animation.start("scaleInAnimation");
                 this.player.pause();
+            }
+
+            if (evt.animation === 'scaleInAnimation') {
+                console.log(pauseButton.scale.valueOf());
             }
         });
     }
