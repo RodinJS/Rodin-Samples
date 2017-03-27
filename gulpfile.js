@@ -43,7 +43,7 @@ gulp.task('list', () => {
 	let uri_list = {};
 	for (var i = 0; i < folders_list.length; i++) {
 		uri_list[folders_list[i]] = { 
-			url: `http://examples.rodin.io/samples/${folders_list[i]}/`,
+			url: `https://examples.rodin.io/samples/${folders_list[i]}/`,
 			git: `https://github.com/RodinJS/Rodin-Samples/tree/master/samples/${folders_list[i]}/`
 		};
 	}
