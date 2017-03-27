@@ -3,8 +3,8 @@ import {VPcontrolPanel} from './VPcontrolPanel.js';
 RODIN.start();
 
 let player = new RODIN.MaterialPlayer({
-    HD: "https://cdn.rodin.io/resources/video/PedraBonita1k.mp4",
-    SD: "https://cdn.rodin.io/resources/video/PedraBonita1k.mp4",
+    HD: "video/rodin2k.mp4",
+    SD: "video/rodin2k.mp4",
     default: "HD"
 });
 
