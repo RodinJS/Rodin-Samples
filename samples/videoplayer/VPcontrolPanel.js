@@ -137,7 +137,7 @@ export class VPcontrolPanel extends RODIN.Sculpt {
 
     showControls() {
         this.panel.parent = this.panelCenter;
-        let vector = RODIN.Scene.activeCamera.getWorldDirection();
+        let vector = RODIN.Scene.active.avatar.HMDCamera._threeObject.getWorldDirection();
         let newRot = Math.atan(vector.x / vector.z) + (vector.z < 0 ? Math.PI : 0) + Math.PI;
         if (Math.abs(this.rotation.y - newRot) >= Math.PI / 3) {
             this.panelCenter.rotation.y = newRot;
@@ -379,7 +379,7 @@ export class VPcontrolPanel extends RODIN.Sculpt {
         this.elementsPending++;
 
         this.bufferEl.on(RODIN.CONST.READY, (evt) => {
-            RODIN.Scene.activeCamera.add(this.bufferEl._threeObject);
+            this.panel.add(this.bufferEl);
             this.bufferEl.position.set(0, 0, -distance + bufferingParams.width / 2);
             this.bufferEl.visible = false;
             this.bufferEl.animation.add(bufferAnimation);

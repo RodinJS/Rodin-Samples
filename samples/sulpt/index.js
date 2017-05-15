@@ -16,7 +16,6 @@ const width = 1.5;
  * Set position
  */
 const box = new RODIN.Box(width);
-box.position.set(shiftByX, shiftByY, shiftByZ);
 RODIN.Scene.add(box);
 
 /**
@@ -24,7 +23,6 @@ RODIN.Scene.add(box);
  * Set position
  */
 const sphere = new RODIN.Sphere(radius);
-sphere.position.set(0, shiftByY, shiftByZ);
 RODIN.Scene.add(sphere);
 
 /**
@@ -32,13 +30,39 @@ RODIN.Scene.add(sphere);
  * Set position
  */
 const cylinder = new RODIN.Cylinder(radius, radius, height);
-cylinder.position.set(-shiftByX, shiftByY, shiftByZ);
 RODIN.Scene.add(cylinder);
 
 /**
- * Create a plane for floor and add to the scene
+ * Create a plane for the floor and add to the scene
  * Make plane as a grid, number of grid's segments is 100
  */
 const plane = new RODIN.Plane(50, 50, 100, 100, new THREE.MeshBasicMaterial({color: 0x336699, wireframe: true}));
 plane.rotation.x = -Math.PI / 2;
 RODIN.Scene.add(plane);
+
+/**
+ * Set sphere as a parent object for box
+ */
+box.parent = sphere;
+
+/**
+ * Add sphere as a child object for cylinder
+ */
+cylinder.add(sphere);
+
+/**
+ * Set cylinder's local position; box and sphere should move with the cylinder
+ */
+cylinder.position.set(shiftByX, shiftByY, shiftByZ);
+
+/**
+ * Set sphere global position; box will move with the sphere
+ */
+sphere.globalPosition.set(0, shiftByY, shiftByZ);
+
+/**
+ * Set box local position with respect to the sphere
+ */
+box.position.set(-shiftByX, 0, 0);
+
+// We can change local and global rotation, quaternion and scale the same way.

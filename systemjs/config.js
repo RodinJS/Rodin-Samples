@@ -1,7 +1,7 @@
 (function (global) {
 
     var paths = {
-        'npm:': 'https://cdn.rodin.io/v0.0.5/'
+        'npm:': 'https://cdn.rodin.io/v0.0.6/'
     };
 
     var map = {
@@ -34,11 +34,13 @@
         'core/button',
         'core/gamePad',
         'core/utils',
-        'core/utils/math',
-        'core/utils/threeWrappers',
         'core/loader',
         'core/plugin',
-        'core/particleSystem'
+        'core/particleSystem',
+        'core/color',
+        'core/camera',
+        'core/avatar',
+        'core/math'
     ];
 
     function packIndex(moduleName) {
