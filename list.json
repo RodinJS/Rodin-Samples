@@ -1,54 +1,54 @@
 {
-  "animation": {
-    "url": "https://examples.rodin.io/samples/animation/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/animation/"
+  "Animation": {
+    "url": "https://examples.rodin.io/samples/Animation/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Animation/"
   },
-  "dragndrop": {
-    "url": "https://examples.rodin.io/samples/dragndrop/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/dragndrop/"
+  "Drag & Drop": {
+    "url": "https://examples.rodin.io/samples/Drag & Drop/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Drag & Drop/"
   },
-  "elemets": {
-    "url": "https://examples.rodin.io/samples/elemets/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/elemets/"
+  "Elemets": {
+    "url": "https://examples.rodin.io/samples/Elemets/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Elemets/"
   },
-  "gamepad_buttons": {
-    "url": "https://examples.rodin.io/samples/gamepad_buttons/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/gamepad_buttons/"
+  "Gamepad Buttons": {
+    "url": "https://examples.rodin.io/samples/Gamepad Buttons/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Gamepad Buttons/"
   },
-  "gamepad_events": {
-    "url": "https://examples.rodin.io/samples/gamepad_events/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/gamepad_events/"
+  "Gamepad Events": {
+    "url": "https://examples.rodin.io/samples/Gamepad Events/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Gamepad Events/"
   },
-  "modelLoader": {
-    "url": "https://examples.rodin.io/samples/modelLoader/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/modelLoader/"
+  "Model Loader": {
+    "url": "https://examples.rodin.io/samples/Model Loader/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Model Loader/"
   },
-  "particle_system": {
-    "url": "https://examples.rodin.io/samples/particle_system/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/particle_system/"
+  "Particles": {
+    "url": "https://examples.rodin.io/samples/Particles/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Particles/"
   },
-  "primitives": {
-    "url": "https://examples.rodin.io/samples/primitives/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/primitives/"
+  "Primitives": {
+    "url": "https://examples.rodin.io/samples/Primitives/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Primitives/"
   },
-  "sample_sulpt": {
-    "url": "https://examples.rodin.io/samples/sample_sulpt/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/sample_sulpt/"
+  "Raycasting": {
+    "url": "https://examples.rodin.io/samples/Raycasting/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Raycasting/"
   },
-  "sample_time": {
-    "url": "https://examples.rodin.io/samples/sample_time/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/sample_time/"
+  "Sculpt": {
+    "url": "https://examples.rodin.io/samples/Sculpt/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Sculpt/"
   },
-  "simple": {
-    "url": "https://examples.rodin.io/samples/simple/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/simple/"
+  "Spheric Skybox": {
+    "url": "https://examples.rodin.io/samples/Spheric Skybox/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Spheric Skybox/"
   },
-  "skybox": {
-    "url": "https://examples.rodin.io/samples/skybox/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/skybox/"
+  "Time": {
+    "url": "https://examples.rodin.io/samples/Time/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Time/"
   },
-  "videoplayer": {
-    "url": "https://examples.rodin.io/samples/videoplayer/",
-    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/videoplayer/"
+  "Videoplayer": {
+    "url": "https://examples.rodin.io/samples/Videoplayer/",
+    "git": "https://github.com/RodinJS/Rodin-Samples/tree/master/samples/Videoplayer/"
   }
 }
