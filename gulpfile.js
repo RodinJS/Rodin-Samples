@@ -99,5 +99,9 @@ gulp.task('prod', (done) => {
 });
 
 gulp.task('dev', (done) => {
+	sequence(['js', 'list:dev'], done);
+});
+
+gulp.task('dev:watch', (done) => {
 	sequence(['js', 'list:dev', 'connect', 'watch'], done);
 });
