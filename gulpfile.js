@@ -38,13 +38,37 @@ gulp.task('js', () => {
    return merge(tasks);
 });
 
-gulp.task('list', () => {
+gulp.task('list:prod', () => {
 	const folders_list = getFolders(scriptsPath);
 	let uri_list = {};
 	for (var i = 0; i < folders_list.length; i++) {
 		uri_list[folders_list[i]] = { 
 			url: `https://examples.rodin.io/samples/${folders_list[i]}/`,
-			git: `https://github.com/RodinJS/Rodin-Samples/tree/master/samples/${folders_list[i]}/`
+			git: `https://github.com/RodinJS/Rodin-Samples/tree/prod/samples/${folders_list[i]}/`
+		};
+	}
+	fs.writeFile('./list.json', JSON.stringify(uri_list, null, 2) , 'utf-8');
+});
+
+gulp.task('list:stage', () => {
+	const folders_list = getFolders(scriptsPath);
+	let uri_list = {};
+	for (var i = 0; i < folders_list.length; i++) {
+		uri_list[folders_list[i]] = { 
+			url: `https://examples.rodin.io/samples/${folders_list[i]}/`,
+			git: `https://github.com/RodinJS/Rodin-Samples/tree/stage/samples/${folders_list[i]}/`
+		};
+	}
+	fs.writeFile('./list.json', JSON.stringify(uri_list, null, 2) , 'utf-8');
+});
+
+gulp.task('list:dev', () => {
+	const folders_list = getFolders(scriptsPath);
+	let uri_list = {};
+	for (var i = 0; i < folders_list.length; i++) {
+		uri_list[folders_list[i]] = { 
+			url: `https://examples.rodin.io/samples/${folders_list[i]}/`,
+			git: `https://github.com/RodinJS/Rodin-Samples/tree/dev/samples/${folders_list[i]}/`
 		};
 	}
 	fs.writeFile('./list.json', JSON.stringify(uri_list, null, 2) , 'utf-8');
@@ -63,9 +87,17 @@ gulp.task('connect', () => {
 });
 
 gulp.task('default', (done) => {
-	sequence(['js', 'list'], done);
+	sequence(['js', 'list:prod'], done);
+});
+
+gulp.task('stage', (done) => {
+	sequence(['js', 'list:stage'], done);
+});
+
+gulp.task('prod', (done) => {
+	sequence(['js', 'list:prod'], done);
 });
 
 gulp.task('dev', (done) => {
-	sequence(['js', 'connect', 'watch'], done);
+	sequence(['js', 'list:dev', 'connect', 'watch'], done);
 });
