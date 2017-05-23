@@ -2,11 +2,26 @@ import * as RODIN from 'rodin/core';
 RODIN.start();
 
 /**
+ * Create plane for the floor and add to the scene
+ * Make plane as a grid, number of grid's segments is 100
+ */
+const plane = new RODIN.Plane(50, 50, 100, 100,
+    new THREE.MeshBasicMaterial({
+        color: 0x35a9ff,
+        wireframe: true,
+        alphaMap: RODIN.Loader.loadTexture('https://cdn.rodin.io/resources/img/gradient.jpg'),
+        transparent: true,
+        opacity: 0.2
+    }));
+plane.rotation.x = -Math.PI / 2;
+RODIN.Scene.add(plane);
+
+/**
  * Load mainland.obj model, when its ready set position and add to the scene
  */
 const mainland = new RODIN.Sculpt('./models/mainland.obj');
 mainland.on(RODIN.CONST.READY, (evt) => {
-    evt.target.position.set(0, 1.6, 2);
+    evt.target.position.set(0, 1.6, -3);
     RODIN.Scene.add(evt.target);
 
     /**
@@ -96,7 +111,7 @@ mainland.on(RODIN.CONST.READY, (evt) => {
         },
         lifetime: {value: 8000, randomness: 0}
     });
-    mainlandParticles.position.set(0, 1.5, -2);
+    mainlandParticles.position.set(0, 1.6, -3);
     RODIN.Scene.add(mainlandParticles);
 
     /**

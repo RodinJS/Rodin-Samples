@@ -71,7 +71,7 @@ export class RangeBar extends RODIN.Sculpt {
          * Set local position
          */
         const finalValueText = new RODIN.Text({
-            text: '10',
+            text: '100',
             color: 0xffffff,
             fontSize: 0.035
         });
@@ -103,7 +103,7 @@ export class RangeBar extends RODIN.Sculpt {
          */
         this.sceneTimeValue = sceneTimeValue;
         this.sceneTimeValue.length = rangeLenght;
-        this.sceneTimeValue.finalValue = 10;
+        this.sceneTimeValue.finalValue = 100;
         this.rangeBtn = rangeBtn;
     }
 
