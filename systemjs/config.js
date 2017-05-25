@@ -2,6 +2,7 @@
 
     var paths = {
         'npm:': 'https://cdn.rodin.io/v0.0.6/'
+        //'npm:': '../../Rodin-Lib/dist/'
     };
 
     var map = {
