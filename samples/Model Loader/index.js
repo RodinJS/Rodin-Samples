@@ -37,6 +37,13 @@ RODIN.Scene.active._scene.add(light2);
  * Create plane for the floor and add to the scene
  * Make plane as a grid, number of grid's segments is 100
  */
-const plane = new RODIN.Plane(50, 50, 100, 100, new THREE.MeshBasicMaterial({color: 0x336699, wireframe: true}));
+const plane = new RODIN.Plane(50, 50, 100, 100,
+    new THREE.MeshBasicMaterial({
+        color: 0x35a9ff,
+        wireframe: true,
+        alphaMap: RODIN.Loader.loadTexture('https://cdn.rodin.io/resources/img/gradient.jpg'),
+        transparent: true,
+        opacity: 0.2
+    }));
 plane.rotation.x = -Math.PI / 2;
 RODIN.Scene.add(plane);

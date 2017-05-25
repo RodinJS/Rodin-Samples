@@ -6,7 +6,14 @@ RODIN.start();
  * Create a plane for the floor and add to the scene
  * Make plane as a grid, number of grid's segments is 100
  */
-const plane = new RODIN.Plane(50, 50, 100, 100, new THREE.MeshBasicMaterial({color: 0x336699, wireframe: true}));
+const plane = new RODIN.Plane(50, 50, 100, 100,
+    new THREE.MeshBasicMaterial({
+        color: 0x35a9ff,
+        wireframe: true,
+        alphaMap: RODIN.Loader.loadTexture('https://cdn.rodin.io/resources/img/gradient.jpg'),
+        transparent: true,
+        opacity: 0.2
+    }));
 plane.rotation.x = -Math.PI / 2;
 RODIN.Scene.add(plane);
 
@@ -16,19 +23,19 @@ RODIN.Scene.add(plane);
  */
 const emptyObject = new RODIN.Sculpt();
 RODIN.Scene.add(emptyObject);
-emptyObject.position.set(0, 1.3, -2);
+emptyObject.position.set(0, 1.3, -2.5);
 emptyObject.rotation.x = Math.PI / 2;
 
 /**
  * Create a sphere and add to emptyObject
  */
-const sphere = new RODIN.Sphere(0.3);
+const sphere = new RODIN.Sphere(0.3, new THREE.MeshNormalMaterial({}));
 emptyObject.add(sphere);
 
 /**
  * Create a box and add to emptyObject
  */
-const box = new RODIN.Box(0.4);
+const box = new RODIN.Box(0.4, new THREE.MeshNormalMaterial({}));
 emptyObject.add(box);
 
 /**
@@ -64,7 +71,7 @@ box.on(RODIN.CONST.UPDATE, function () {
  */
 const rangeBar = new RangeBar();
 RODIN.Scene.add(rangeBar);
-rangeBar.position.set(0, 1.1, -1.1);
+rangeBar.position.set(0, 1.1, -1.2);
 
 /**
  * On rangeBar ready we need to set rangeBtn on start position, which depend on current RODIN.Time's speed

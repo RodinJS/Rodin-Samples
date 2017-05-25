@@ -4,7 +4,8 @@
   "description": "Rodin Inc. Samples Repository.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp dev:watch"
   },
   "repository": {
     "type": "git",
