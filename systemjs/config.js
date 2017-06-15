@@ -40,7 +40,10 @@
         'core/color',
         'core/camera',
         'core/avatar',
-        'core/math'
+        'core/math',
+        'core/transport',
+        'core/device',
+        'core/grid',
     ];
 
     function packIndex(moduleName) {
