@@ -53,7 +53,7 @@ carBody.on(RODIN.CONST.READY, (evt) => {
  * Set local position
  */
 const infoText = new RODIN.Text({
-    text: 'Click to move the object',
+    text: 'Right click to move',
     color: 0xffffff,
     fontSize: 0.1
 });
