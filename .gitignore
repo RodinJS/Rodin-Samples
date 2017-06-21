@@ -182,3 +182,5 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/webstorm,windows,osx,linux,node
 
 samples/**/build
+
+list.json
