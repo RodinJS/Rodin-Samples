@@ -183,4 +183,4 @@ $RECYCLE.BIN/
 
 samples/**/build
 
-list.json
+/list.json
