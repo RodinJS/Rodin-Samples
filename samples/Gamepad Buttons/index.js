@@ -73,7 +73,7 @@ carBody.on(RODIN.CONST.UPDATE, (evt) => {
     /**
      * Because cardboard has one button, after its down we change cars direction
      */
-    if (RODIN.GamePad.getButtonDown(RODIN.Buttons['cardboardTrigger']) || RODIN.GamePad.getButtonDown(RODIN.Buttons['mouseRight']) ){
+    if (RODIN.GamePad.getButtonDown(RODIN.Buttons.cardboardTrigger) || RODIN.GamePad.getButtonDown(RODIN.Buttons.mouseRight) ){
         direction = !direction;
     }
 
@@ -81,9 +81,9 @@ carBody.on(RODIN.CONST.UPDATE, (evt) => {
      * Check if left button is down set step to left and moving true
      * So the car will start moving to the left
      */
-    if (RODIN.GamePad.getButtonDown(RODIN.Buttons['viveLeftTrigger']) ||
-        RODIN.GamePad.getButtonDown(RODIN.Buttons['oculusTouchLeftTrigger']) ||
-        ((RODIN.GamePad.getButtonDown(RODIN.Buttons['mouseRight'] || RODIN.GamePad.getButtonDown(RODIN.Buttons['cardboardTrigger'])) && direction))){
+    if (RODIN.GamePad.getButtonDown(RODIN.Buttons.viveLeftTrigger) ||
+        RODIN.GamePad.getButtonDown(RODIN.Buttons.oculusTouchLeftTrigger) ||
+        ((RODIN.GamePad.getButtonDown(RODIN.Buttons.mouseRight)  || RODIN.GamePad.getButtonDown(RODIN.Buttons.cardboardTrigger)) && direction)){
         moving = true;
         step = -0.01 * RODIN.Time.delta
     }
@@ -92,9 +92,9 @@ carBody.on(RODIN.CONST.UPDATE, (evt) => {
      * Check if right button is down set step to right and moving true
      * So the car will start moving to the right
      */
-    if (RODIN.GamePad.getButtonDown(RODIN.Buttons['viveRightTrigger']) ||
-        RODIN.GamePad.getButtonDown(RODIN.Buttons['oculusTouchRightTrigger']) ||
-        ((RODIN.GamePad.getButtonDown(RODIN.Buttons['mouseRight'] || RODIN.GamePad.getButtonDown(RODIN.Buttons['cardboardTrigger'])) && !direction))){
+    if (RODIN.GamePad.getButtonDown(RODIN.Buttons.viveRightTrigger) ||
+        RODIN.GamePad.getButtonDown(RODIN.Buttons.oculusTouchRightTrigger) ||
+        ((RODIN.GamePad.getButtonDown(RODIN.Buttons.mouseRight) || RODIN.GamePad.getButtonDown(RODIN.Buttons.cardboardTrigger)) && !direction)){
         moving = true;
         step = 0.01 * RODIN.Time.delta
     }
@@ -103,12 +103,12 @@ carBody.on(RODIN.CONST.UPDATE, (evt) => {
      * Check if a button up set moving false
      * Car stops
      */
-    if (RODIN.GamePad.getButtonUp(RODIN.Buttons['viveLeftTrigger']) ||
-        RODIN.GamePad.getButtonUp(RODIN.Buttons['oculusTouchLeftTrigger']) ||
-        RODIN.GamePad.getButtonUp(RODIN.Buttons['mouseRight']) ||
-        RODIN.GamePad.getButtonUp(RODIN.Buttons['viveRightTrigger']) ||
-        RODIN.GamePad.getButtonUp(RODIN.Buttons['oculusTouchRightTrigger']) ||
-        RODIN.GamePad.getButtonUp(RODIN.Buttons['cardboardTrigger'])) {
+    if (RODIN.GamePad.getButtonUp(RODIN.Buttons.viveLeftTrigger) ||
+        RODIN.GamePad.getButtonUp(RODIN.Buttons.oculusTouchLeftTrigger) ||
+        RODIN.GamePad.getButtonUp(RODIN.Buttons.mouseRight) ||
+        RODIN.GamePad.getButtonUp(RODIN.Buttons.viveRightTrigger) ||
+        RODIN.GamePad.getButtonUp(RODIN.Buttons.oculusTouchRightTrigger) ||
+        RODIN.GamePad.getButtonUp(RODIN.Buttons.cardboardTrigger)) {
         moving = false;
     }
 
