@@ -9,9 +9,12 @@ RODIN.start();
  * Load texture from URL
  * Add to the scene
  */
-const sphericalSkybox = new RODIN.Sphere(72, 36, 36,
+const sphericalSkybox = new RODIN.Sphere(72, 720, 4,
     new THREE.MeshBasicMaterial({
-        side: THREE.BackSide,
         map: RODIN.Loader.loadTexture('./textures/pitch_deck_spherical.jpg')
     }));
+sphericalSkybox.on(RODIN.CONST.READY, evt => {
+    evt.target.scale.set(-1, 1, 1);
+    evt.target.rotation.y = Math.PI;
+});
 RODIN.Scene.add(sphericalSkybox);
